@@ -1,7 +1,5 @@
 # ArcGIS Server CentOS Install
 
-------
-
 This repository is little more than the script I use and the modified argisserver file used to silently install ArcGIS for Server 10.3 on a clean Minimal Desktop install of CentOS 6.6. If you want to reproduce the process, first create a CentOS 6.6 environment to work in. Next, get the install files and a license file from Esri. Rename the license file and update the setup script with the name of your license file. Finally, from the terminal as root, run the install.
 
 ## Create a CentOS Environment
