@@ -4,6 +4,9 @@
 # password to use
 PASSWORD="esri"
 
+# name of license file
+LICENSE="arcgisServerLicense.ecp"
+
 # get the directory where this file is being located
 LOCALDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
@@ -28,7 +31,7 @@ echo "ags hard nproc 25059" >> $LIMITSFILE
 
 # move the source and license file into the temp directory
 cp $LOCALDIR/ArcGIS_for_Server_Linux*.tar.gz /tmp
-cp $LOCALDIR/arcgisServerLicense.ecp /tmp
+cp $LOCALDIR/$LICENSE /tmp
 
 # ensure enough permissions on the source
 chmod 777 /tmp/ArcGIS_for_Server_Linux*.tar.gz
@@ -37,7 +40,7 @@ chmod 777 /tmp/ArcGIS_for_Server_Linux*.tar.gz
 su -c "tar -xf /tmp/ArcGIS_for_Server_Linux*.tar.gz -C /tmp/" ags
 
 # run the install as the new user
-su -c "/tmp/ArcGISServer/Setup -m silent -l yes -a /tmp/arcgisServerLicense.ecp" ags
+su -c "/tmp/ArcGISServer/Setup -m silent -l yes -a /tmp/$LICENSE" ags
 
 # remove the temporary resources
 rm -rf /tmp/ArcGISServer
