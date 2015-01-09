@@ -1,0 +1,9 @@
+# jetbrains project configuration
+.idea
+
+# ArcGIS license files
+*.ecp
+*.prvc
+
+# archives, most likely the ArcGIS Server install files
+*.tar.gz
