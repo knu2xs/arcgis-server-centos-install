@@ -2,7 +2,7 @@
 # Generic install script for ArcGIS Server
 
 # password to use
-PASSWORD="Esri$tud"
+PASSWORD="esri"
 
 # get the directory where this file is being located
 LOCALDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
